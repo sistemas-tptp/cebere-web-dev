@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo para tu PyME</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <center>
+        <h1>Estamos en labores de mantenimiento</h1>
+        </center>
+        <br><br>
+        <div id="clock" class="row justify-content-center align-items-center"></div>
+        
+        
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.1.0/jquery.countdown.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.0/moment-timezone-with-data-2010-2020.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//November 17, 2015 - 10am ET
+		var nextYear = moment.tz("2021-04-14 11:00", "America/Mexico_City");
+
+		 $('#clock').countdown(nextYear.toDate(), function(event) {
+		     var $this = $(this).html(event.strftime(''
+		     + '<div class="col-md-2" style="text-align:center; font-size:30px;">%w <br>Semanas</div>  '
+		     + '<div class="col-md-2" style="text-align:center; font-size:30px;">%d <br>D&iacute;as</div>  '
+		     + '<div class="col-md-2" style="text-align:center; font-size:30px;">%H <br>Horas</div>  '
+		     + '<div class="col-md-2" style="text-align:center; font-size:30px;">%M <br>Minutos</div>  '
+		     + '<div class="col-md-2" style="text-align:center; font-size:30px;">%S <br>Segundos</div>  '
+		     ));
+		 });
+	});
+</script>
+
+
+
+    </div>
+    
+</body>
+
+</html>
+
